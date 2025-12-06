@@ -1,0 +1,15 @@
+//Print all enum names and integer values using a loop
+#include <stdio.h>
+
+enum Role {ADMIN, USER, GUEST};
+
+int main() {
+    enum Role role;
+    const char *roleNames[] = {"ADMIN", "USER", "GUEST"};
+
+    for(role = ADMIN; role <= GUEST; role++) {
+        printf("%s = %d\n", roleNames[role], role);
+    }
+
+    return 0;
+}
